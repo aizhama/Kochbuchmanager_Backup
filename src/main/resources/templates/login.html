@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="de" th:replace="fragments/header :: resources (pageTitle='Kochbuchmanager')"></head>
+<body>
+<nav th:replace="fragments/nav :: navbar"></nav>
+
+<!-- alert -->
+<div class="alert alert-danger alert-dismissible fade show text-center" th:if="${param.error}">
+    <button class="close" data-dismiss="alert" type="button">&times;</button>
+    Ungültige Zugangsdaten.
+</div>
+
+<div class="container p-3 mb-5 body-height">
+    <form id="login-form" method="post" th:action="@{/login}">
+        <div class="form-group">
+            <div class="input-group">
+                <input class="form-control" name="username" id="username" placeholder="Benutzername" th:autofocus="autofocus" th:required="required" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group">
+                    <input class="form-control" id="passwordlogin" name="passwordlogin" placeholder="Passwort" th:autocomplete="current-password" th:required="required" type="password">
+                </div>
+                <small id="links" class="form-text text-muted float-left"><a th:href="@{/register}" class="shortcut">Noch nicht registriert?</a></small>
+            </div>
+        </div>
+        <br>
+        <fieldset>
+            <div aria-label="Button zum Anmelden" class="btn-group" role="group">
+                <button class="btn btn-custom mr-1" id="buttonlogin" type="submit">Anmelden</button>
+            </div>
+        </fieldset>
+    </form>
+    <!-- JavaScript wird zuletzt geladen, um den Aufbau der Seite zu beschleunigen -->
+    <div th:replace="fragments/scripts :: foot"></div>
+</body>
+</html>

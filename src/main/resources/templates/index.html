@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="de" th:replace="fragments/header :: resources (pageTitle='Kochbuchmanager')"></head>
+<body>
+<nav th:replace="fragments/nav :: navbar"></nav>
+
+<div class="jumbotron">
+    <h1 class="display-3">Rezepte!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+        to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+        <a class="btn bg-custom btn-lg" href="/anmeldung" role="button">Rezepte stöbern</a>
+    </p>
+</div>
+
+<!-- JavaScript wird zuletzt geladen, um den Aufbau der Seite zu beschleunigen -->
+<div th:replace="fragments/scripts :: foot"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.navbar {
+    position: relative;
+}
+.navbar-brand {
+    background: url(../image/logo.png) center / contain no-repeat;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    width: 300px; /* no height needed ... image will resize automagically */
+}
+.bg-custom {
+    background-color: #7cb342;
+}
+.btn-custom {
+    background-color: #001aff;
+}

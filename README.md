@@ -1,0 +1,3 @@
+Kochbuchmanager.
+
+<insert Pflichtenheft>

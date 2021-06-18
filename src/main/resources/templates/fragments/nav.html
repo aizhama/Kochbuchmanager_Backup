@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!--suppress HtmlUnknownTag -->
+<!--suppress HtmlRequiredTitleElement -->
+<body>
+<nav class="navbar navbar-expand fixed-top fixed-top-2 navbar-light bg-custom" role="navigation" th:fragment="navbar">
+    <div class="container-fluid">
+
+        <button aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarColor02" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" style="margin: 0; float: none;" href="#"></a>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto" id="nav">
+                <li class="nav-item links"><a class="nav-link" th:href="@{/}" id="start">Home</a></li>
+                <li class="nav-item links"><a class="nav-link" th:href="@{/library.html}">Bibliothek</a></li>
+            </ul>
+
+            <!-- <button class="btn-custom" type="button" data-toggle="modal" data-target="#myModal">Open Modal</button> Button trigger modal -->
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
